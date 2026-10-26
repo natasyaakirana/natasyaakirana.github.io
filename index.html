@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #faf7f2;
+      color: #49413d;
+      line-height: 1.7;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: #faf7f2;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #eee5dc;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #94776a;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #49413d;
+      font-size: 13px;
+    }
+
+    nav a:hover {
+      color: #b28d7b;
+    }
+
+    section {
+      padding: 75px 8%;
+      scroll-margin-top: 70px;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+      background: #f0e7df;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .eyebrow {
+      color: #a17e6e;
+      letter-spacing: 3px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(38px, 6vw, 65px);
+      line-height: 1.2;
+      margin: 18px 0;
+      font-weight: normal;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      font-size: 34px;
+      font-weight: normal;
+      margin-bottom: 18px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 24px;
+      background: #94776a;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+    }
+
+    .profile {
+      width: 240px;
+      height: 300px;
+      flex-shrink: 0;
+      border-radius: 120px 120px 20px 20px;
+      background: #dfcbbd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: #786154;
+      overflow: hidden;
+    }
+
+    .profile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .subtitle {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: #82766e;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #fffdf9;
+      padding: 25px;
+      border-radius: 18px;
+      border: 1px solid #eee4da;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #94776a;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 12px;
+      background: #eee2d8;
+      border-radius: 20px;
+      margin: 4px;
+      font-size: 13px;
+    }
+
+    .journey-item {
+      max-width: 650px;
+      margin: 20px auto;
+      padding: 20px;
+      border-left: 3px solid #c4a592;
+      background: #fffdf9;
+    }
+
+    .contact {
+      background: #f0e7df;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+      color: #82766e;
+    }
+
+    @media (max-width: 650px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      .profile {
+        width: 190px;
+        height: 230px;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">My Portfolio.</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <p class="eyebrow">Welcome to my little world</p>
+
+      <h1>Hi, I'm <br>Nama Kamu!</h1>
+
+      <p>
+        A high school student who loves learning,
+        exploring new things, and expressing creativity.
+      </p>
+
+      <p>
+        This is a little space where I share my stories,
+        hobbies, and the things I'm proud to create.
+      </p>
+
+      <a href="#about" class="button">Get to Know Me</a>
+    </div>
+
+    <div class="profile">
+      <!-- Ganti dengan foto milikmu -->
+      <span>Your Photo Here</span>
+      <!-- Contoh: <img src="foto.jpg" alt="Foto profil"> -->
+    </div>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="about">
+    <p class="eyebrow">A little introduction</p>
+    <h2>About Me</h2>
+
+    <p>
+      Halo! Aku <strong>Nama Kamu</strong>, seorang siswi
+      SMA yang sedang menikmati proses belajar dan
+      menemukan hal-hal baru tentang diriku.
+    </p>
+
+    <p>
+      Aku tertarik pada dunia kreativitas, mencoba
+      pengalaman baru, dan mengembangkan kemampuan
+      melalui kegiatan sekolah maupun aktivitas sehari-hari.
+    </p>
+
+    <p>
+      Bagiku, setiap proses adalah kesempatan untuk
+      tumbuh, belajar, dan menjadi versi diriku yang lebih baik.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Education</h3>
+        <p>Nama Sekolah</p>
+        <p>Kelas: X / 10</p>
+      </div>
+
+      <div class="card">
+        <h3>My Interests</h3>
+        <p>Creative projects, learning, and self-growth.</p>
+      </div>
+
+      <div class="card">
+        <h3>My Goal</h3>
+        <p>Terus belajar, berkembang, dan berani mencoba.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="center">
+      <p class="eyebrow">Things I've created</p>
+      <h2>My Projects</h2>
+      <p class="subtitle">
+        Beberapa karya dan pengalaman yang menjadi
+        bagian dari perjalanan belajarku.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>01. Creative Design</h3>
+        <p>
+          Kumpulan desain poster, logo, atau karya visual
+          yang pernah aku buat.
+        </p>
+        <p><strong>Role:</strong> Designer</p>
+      </div>
+
+      <div class="card">
+        <h3>02. Video Project</h3>
+        <p>
+          Proyek video sekolah yang melatih kreativitas,
+          editing, dan kerja sama tim.
+        </p>
+        <p><strong>Role:</strong> Editor / Team Member</p>
+      </div>
+
+      <div class="card">
+        <h3>03. School Assignment</h3>
+        <p>
+          Tugas atau proyek pembelajaran yang memberikan
+          pengalaman dan pengetahuan baru.
+        </p>
+        <p><strong>Role:</strong> Student</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOBBIES -->
+  <section id="hobbies">
+    <div class="center">
+      <p class="eyebrow">Things I enjoy</p>
+      <h2>My Hobbies</h2>
+      <p class="subtitle">
+        Hal-hal sederhana yang membuat hari-hariku
+        lebih menyenangkan.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Volleyball</h3>
+        <p>
+          Menikmati olahraga, belajar kerja sama,
+          dan membangun semangat tim.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Dance</h3>
+        <p>
+          Mengeksplorasi gerakan, musik,
+          dan mengekspresikan kreativitas.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Creative Editing</h3>
+        <p>
+          Menyusun foto atau video menjadi
+          karya yang menarik.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MY JOURNEY -->
+  <section id="journey">
+    <div class="center">
+      <p class="eyebrow">Growing through experiences</p>
+      <h2>My Journey</h2>
+      <p class="subtitle">
+        Setiap pengalaman punya cerita dan pelajarannya sendiri.
+      </p>
+    </div>
+
+    <div class="journey-item">
+      <h3>My School Life</h3>
+      <p>
+        Belajar hal baru, menyelesaikan tugas,
+        dan mengenal berbagai pengalaman di sekolah.
+      </p>
+    </div>
+
+    <div class="journey-item">
+      <h3>Trying New Things</h3>
+      <p>
+        Berani mencoba kegiatan baru dan mengembangkan
+        minat melalui latihan serta pengalaman.
+      </p>
+    </div>
+
+    <div class="journey-item">
+      <h3>My Future Goals</h3>
+      <p>
+        Terus meningkatkan kemampuan, membangun
+        kepercayaan diri, dan meraih cita-cita.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="center">
+      <p class="eyebrow">What I'm learning</p>
+      <h2>My Skills</h2>
+
+      <p>
+        <span class="tag">Teamwork</span>
+        <span class="tag">Communication</span>
+        <span class="tag">Video Editing</span>
+        <span class="tag">Creativity</span>
+        <span class="tag">Presentation</span>
+        <span class="tag">Problem Solving</span>
+      </p>
+
+      <p class="subtitle">
+        Some skills are things I already know,
+        while others are still a work in progress.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <p class="eyebrow">Let's connect</p>
+    <h2>Thank You for Visiting!</h2>
+
+    <p>
+      Terima kasih sudah mengunjungi website portofolioku.
+      Semoga kita bisa saling berbagi inspirasi.
+    </p>
+
+    <!-- Ganti dengan email yang memang ingin dibagikan -->
+    <p>Email: emailkamu@example.com</p>
+
+    <a href="#home" class="button">Back to Top ↑</a>
+  </section>
+
+  <footer>
+    <p>© 2026 Nama Kamu | Made with creativity ♡</p>
+  </footer>
+
+</body>
+        </html>
+        
